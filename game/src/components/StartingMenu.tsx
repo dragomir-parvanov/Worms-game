@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Button, InputGroup, FormControl } from "react-bootstrap";
 import { Component } from "react";
+import { Button, InputGroup, FormControl } from "react-bootstrap";
 import isNicknameValid from "../functions/isNicknameValid";
 
 export interface MenuProps {}
@@ -9,7 +9,7 @@ export interface MenuState {
   arePlayButtonsDisabled: boolean;
 }
 
-class Menu extends React.Component<MenuProps, MenuState> {
+class StartingMenu extends React.Component<MenuProps, MenuState> {
   state: MenuState = {
     arePlayButtonsDisabled: true,
   };
@@ -64,4 +64,4 @@ class Menu extends React.Component<MenuProps, MenuState> {
   }
 }
 
-export default Menu;
+export default StartingMenu;
