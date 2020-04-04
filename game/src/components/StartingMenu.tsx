@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import { Button, InputGroup, FormControl } from "react-bootstrap";
+import { Button, InputGroup, FormControl, Form } from "react-bootstrap";
 import isNicknameValid from "../functions/isNicknameValid";
 
 export interface MenuProps {}
@@ -38,27 +38,30 @@ class StartingMenu extends React.Component<MenuProps, MenuState> {
           left: "50%",
         }}
       >
-        <InputGroup className="mb-4">
-          <FormControl
-            onChange={this.validateInput}
-            placeholder="Enter your nickname.."
-          />
-        </InputGroup>
-        <Button
-          variant="primary"
-          disabled={arePlayButtonsDisabled}
-          style={{ ...this.buttonStyle, ...{ marginBottom: "3vh" } }}
-        >
-          Search server
-        </Button>
-        <br />
-        <Button
-          variant="success"
-          disabled={arePlayButtonsDisabled}
-          style={this.buttonStyle}
-        >
-          Start Game
-        </Button>
+        <Form.Group>
+          <div>
+            <FormControl
+              onChange={this.validateInput}
+              placeholder="Enter your nickname.."
+              style={{ marginBottom: "3vh" }}
+            />
+          </div>
+          <Button
+            variant="primary"
+            disabled={arePlayButtonsDisabled}
+            style={{ ...this.buttonStyle, ...{ marginBottom: "3vh" } }}
+          >
+            Search server
+          </Button>
+          <br />
+          <Button
+            variant="success"
+            disabled={arePlayButtonsDisabled}
+            style={this.buttonStyle}
+          >
+            Start Game
+          </Button>
+        </Form.Group>
       </div>
     );
   }
