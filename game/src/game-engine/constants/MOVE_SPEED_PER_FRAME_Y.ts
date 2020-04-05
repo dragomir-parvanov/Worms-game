@@ -1,0 +1,3 @@
+const MOVE_SPEED_PER_FRAME_Y = 10
+
+export default MOVE_SPEED_PER_FRAME_Y
